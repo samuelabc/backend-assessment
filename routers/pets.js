@@ -212,7 +212,11 @@ petsRouter.put("/:petId", async (request, response) => {
       .json({ message: "pet updated", data: filterPets(newPet) });
   } catch (err) {
     console.error("error", err.message);
-    response.status(400).json({ message: err.message });
+    response.status(400).json({
+      error: {
+        message: err.message,
+      },
+    });
   }
 });
 
@@ -306,7 +310,11 @@ petsRouter.patch("/:petId", async (request, response) => {
       .json({ message: "pet updated", data: filterPets(newPet) });
   } catch (err) {
     console.error("error", err.message);
-    response.status(400).json({ message: err.message });
+    response.status(400).json({
+      error: {
+        message: err.message,
+      },
+    });
   }
 });
 
