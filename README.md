@@ -79,7 +79,7 @@ const peopleSchema = Joi.object({
 2. `DELETE /api/people/{personId}`\
    Delete person of this personId. Response with person being deleted.
 
-### Improved functionality
+## Improved functionality
 
 1. Using middleware to log request information and response status.
 2. Using middleware to handle unknown endpoint, when encounter, response with 404 error.
