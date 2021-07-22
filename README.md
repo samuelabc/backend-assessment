@@ -69,6 +69,6 @@ Delete person of this personId. Response with person being deleted.
 ### Improved functionality
 1. Using middleware to log request information and response status.
 2. Using middleware to handle unknown endpoint, when encounter, response with 404 error.
-3. Handling errors. During CRUD operation, break the operation and response with error message when encounter with error, including pet-not-exist error, person-not-exist-error, and model-format-error.
+3. Error handling. During CRUD operation, break the operation and response with error message when encounter with error, including pet-not-exist error, person-not-exist-error, and model-format-error.
 4. Using transactions during CRUD operations, to ensure ACID properties of these operations.
 
