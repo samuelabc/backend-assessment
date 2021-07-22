@@ -1,0 +1,79 @@
+GET http://localhost:3001/api/pets/57112 HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:3001/api/pets/person/955585 HTTP/1.1
+content-type: application/json
+
+###
+POST http://localhost:3001/api/pets HTTP/1.1
+content-type: application/json
+
+{
+    "name": "cokaaa",
+    "type":"dog",
+    "owner": "234" ,
+    "age":24
+}
+
+###
+PUT http://localhost:3001/api/pets/57112 HTTP/1.1
+content-type: application/json
+
+{
+     "name": "dasdf",
+    "type":"dog",
+    "owner": "234" ,
+    "age":24
+}
+
+####
+DELETE http://localhost:3001/api/pets/15489 HTTP/1.1
+content-type: application/json
+
+
+###
+GET http://localhost:3001/api/people/55d585 HTTP/1.1
+content-type: application/json
+
+
+###
+GET http://localhost:3001/api/people/friend/55585 HTTP/1.1
+content-type: application/json
+
+
+####
+POST http://localhost:3001/api/people HTTP/1.1
+content-type: application/json
+
+{
+    "name": "samuel",
+    "age": 12,
+    "pets": [],
+    "friends" : ["57148", "73967"]
+}
+
+####
+PUT http://localhost:3001/api/people/57142 HTTP/1.1
+content-type: application/json
+
+{
+    "name":"234",
+    "age": 24,
+    "pets": ["57115"],
+    "friends" : ["79415"]
+}
+
+####
+PATCH  http://localhost:3001/api/people/57145 HTTP/1.1
+content-type: application/json
+
+{
+    "age": 24,
+    "pets": ["57115"],
+    "friends" : ["79415"]
+}
+
+###
+DELETE http://localhost:3001/api/people/79576 HTTP/1.1
+content-type: application/json
