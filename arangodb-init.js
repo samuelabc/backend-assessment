@@ -5,6 +5,10 @@ async function dbInit() {
     url: "http://127.0.0.1:8529",
     auth: { username: config.DB_USERNAME, password: config.DB_PASSWORD },
   });
+
+  //drop database
+  // await db.dropDatabase("people-pets-db");
+
   await db.createDatabase("people-pets-db").then(
     () => console.log("Database created"),
     (err) => console.error("Failed to create database:", err.message)
@@ -18,9 +22,6 @@ async function dbInit() {
     () => console.log("Collection people created"),
     (err) => console.error("Failed to create people collection:", err.message)
   );
-
-  //drop database
-  //   await db.dropDatabase("people-pets-db");
 }
 
 const petsSchema = {
